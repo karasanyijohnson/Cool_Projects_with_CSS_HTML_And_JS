@@ -49,6 +49,26 @@ function setBgGreet() {
         document.body.style.color = "white"
     }
 }
+
+// Get Name
+function getFocus(){
+    if(localStorage.getItem('name') === null){
+        name.textContent = '[Enter name]';
+    } else{
+        name.textContent = localStorage.getItem('name');
+    }
+}
+// Get Focus
+function getFocus(){
+    if(localStorage.getItem('focus') === null){
+        focus.textContent = '[Enter Focus]';
+    } else{
+        focus.textContent = localStorage.getItem('focus');
+    }
+}
+
 // Run
-showTime()
-setBgGreet()
+showTime();
+setBgGreet();
+getName();
+getFocus();
