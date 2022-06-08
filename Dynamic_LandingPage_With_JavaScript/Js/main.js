@@ -1,8 +1,8 @@
 // DOM Elements
 const time = document.getElementById('time'),
-  greeting = document.getElementById('greeting'),
-  myName = document.getElementById('name'),
-  focus = document.getElementById('focus');
+      greeting = document.getElementById('greeting'),
+      myName = document.getElementById('name'),
+      focus = document.getElementById('focus');
 
 // Options
 const showAmPm = true;
@@ -21,9 +21,8 @@ function showTime() {
   hour = hour % 12 || 12;
 
   // Output Time
-  time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(
-    sec
-  )} ${showAmPm ? amPm : ''}`;
+  time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)} 
+  ${showAmPm ? amPm : ''}`;
 
   setTimeout(showTime, 1000);
 }
